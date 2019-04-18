@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Dax:400,900');
+$font: 'Dax',
+sans-serif;
+$white: #fff;
+$green: #007e90;
+
+html {
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+
+.middle {
+  width: 100%;
+  text-align: center;
+  h1 {
+    font-family: $font;
+    color: $white;
+  }
+  input[type="radio"] {
+    display: none;
+    &:checked {
+      + .box {
+        background-color: $green;
+        span {
+          color: white;
+          transform: translateY(70px);
+          &:before {
+            transform: translateY(0px);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: $white;
+    transition: all 250ms ease;
+    will-change: transition;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    font-family: $font;
+    font-weight: 900;
+    &:active{
+      transform: translateY(10px);
+    }
+    span {
+      position: absolute;
+      transform: translate(0, 60px);
+      left: 0;
+      right: 0;
+      transition: all 300ms ease;
+      font-size: 1.5em;
+      user-select: none;
+      color: $green;
+      &:before {
+        font-size: 1.2em;
+        font-family: FontAwesome;
+        display: block;
+        transform: translateY(-80px);
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+        font-weight: normal;
+        color: white;
+      }
+    }
+  }
+  .front-end {
+    span {
+      &:before {
+        content: '\f121';
+      }
+    }
+  }
+  .back-end {
+    span {
+      &:before {
+        content: '\f0f4';
+      }
+    }
+  }
+
+  /* Made by */
+  p {
+    color: $white;
+    font-family: $font;
+    font-weight: 400;
+    a {
+      text-decoration: underline;
+      font-weight: bold;
+      color: #FFF;
+    }
+    span {
+      &:after {
+        content: '\f0e7';
+        font-family: FontAwesome;
+        color: yellow;
+      }
+    }
+  }
+}
+  tbody td {
+      border: solid 1px #DDEEEE;
+      color: #333;
+      padding: 10px;
+      text-shadow: 1px 1px 1px #fff;
+  }
+  thead th {
+      background-color: #DDEFEF;
+      border: solid 1px #DDEEEE;
+      color: #336B6B;
+      padding: 10px;
+      text-align: left;
+      text-shadow: 1px 1px 1px #fff;
+  }
+  table {
+      margin-left:auto;
+      margin-right:auto;
+      width:40%;
+      border: solid 1px #DDEEEE;
+      border-collapse: collapse;
+      border-spacing: 0;
+      font: normal 13px Arial, sans-serif;
+  }
+  #table-scroll {
+  max-height:270px;
+  overflow:auto;
+  margin-top:20px;
+}
+.status{
+  max-height: 15px;
+
+}
+.city{
+  background-image: url("https://www.discotech.me/wp-content/uploads/2015/07/miami-south-beach_596x334.jpg")
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -2;
+  position: absolute;
+}
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+}
